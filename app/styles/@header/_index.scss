@@ -1,3 +1,28 @@
-.header {
-	color: k19.$amber--100;
+/// @name Header
+/// @author Haba Kudzaev (rx1310)
+/// @link https://github.com/rx1310
+/// @arg {string} header
+/// @require Kalium19
+@include k19.b(header) {
+
+	//? Header Wrapper
+	/// @name Wrapper
+	/// @arg {string} wrapper
+	@include k19.e(wrapper) {}
+
+	//? Header Image
+	/// @name Image
+	/// @arg {string} image
+	@include k19.e(image) {}
+
+	//? Header Title
+	/// @name Title
+	/// @arg {string} title
+	@include k19.e(title) {}
+
+	//? Header Description
+	/// @name Description
+	/// @arg {string} description
+	@include k19.e(description) {}
+
 }
