@@ -1,0 +1,11 @@
+{% if page.app_name != null %}
+
+	{# ? название приложения #}
+	<meta name="application-name" content="{{ page.app_name }}">
+	<meta name="apple-mobile-web-app-title" content="{{ page.app_name }}">
+
+	{# ? добавить на домашний экран #}
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="mobile-web-app-capable" content="yes">
+
+{% endif %}
