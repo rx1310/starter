@@ -1,4 +1,12 @@
 {
+	"scripts": {
+    "start": "run-p 11ty:serve sass:watch",
+    "build": "run-s sass:compile 11ty:build",
+    "sass:compile": "sass --no-source-map app/styles/:dist/styles/ --style compressed",
+    "sass:watch": "sass --no-source-map app/styles/:dist/styles/ --watch",
+    "11ty:serve": "npx @11ty/eleventy --serve --config=.11ty.js",
+    "11ty:build": "npx @11ty/eleventy --config=.11ty.js"
+  },
 	"devDependencies": {
     "@11ty/eleventy": "^1.0.0",
     "@rx1310/kalium19": "^3.0.4",
