@@ -5,23 +5,19 @@
 /// @require Kalium19
 @include k19.b(header) {
 
-	//? Header Wrapper
-	/// @name Wrapper
+	/// @name Header:Wrapper
 	/// @arg {string} wrapper
 	@include k19.e(wrapper) {}
 
-	//? Header Image
-	/// @name Image
+	/// @name Header:Image
 	/// @arg {string} image
 	@include k19.e(image) {}
 
-	//? Header Title
-	/// @name Title
+	/// @name Header:Title
 	/// @arg {string} title
 	@include k19.e(title) {}
 
-	//? Header Description
-	/// @name Description
+	/// @name Header:Description
 	/// @arg {string} description
 	@include k19.e(description) {}
 

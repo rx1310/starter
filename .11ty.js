@@ -16,9 +16,7 @@ module.exports = function(cnf) {
 	cnf.setBrowserSyncConfig({
 
 		server: {
-			baseDir: [
-				'./dist',
-			]
+			baseDir: ['./dist']
 		},
 
 		files: [
@@ -31,7 +29,7 @@ module.exports = function(cnf) {
 		notify   : false,
 		ui       : false,
 		open     : true,
-		browser  : ["chromium-browser"]
+		browser  : ["chromium-browser"] // "google chrome", "firefox"
 
 	});
 
@@ -41,8 +39,8 @@ module.exports = function(cnf) {
 		if( outputPath && outputPath.endsWith(".html") ) {
 
 			let minified = htmlmin.minify(content, {
-				useShortDoctype: true,
-				removeComments: true,
+				useShortDoctype   : true,
+				removeComments    : true,
 				collapseWhitespace: true
 			});
 
