@@ -1,6 +1,7 @@
 const mdIt    = require('markdown-it');
 const mdAttrs = require('markdown-it-attrs');
 const yaml    = require("js-yaml");
+const htmlmin = require("html-minifier");
 
 module.exports = function(cnf) {
 
@@ -33,6 +34,25 @@ module.exports = function(cnf) {
 		browser  : ["chromium-browser"]
 
 	});
+
+	// ? конфигурация html-minifier
+	cnf.addTransform("htmlmin", function(content, outputPath) {
+
+		if( outputPath && outputPath.endsWith(".html") ) {
+
+      let minified = htmlmin.minify(content, {
+        useShortDoctype: true,
+        removeComments: true,
+        collapseWhitespace: true
+      });
+
+      return minified;
+
+    }
+
+    return content;
+
+  });
 
 	// ? Конфигурация markdown-it
 	let markdownLibrary = mdIt({
