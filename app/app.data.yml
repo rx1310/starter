@@ -54,9 +54,9 @@ twitter:
 # * {hex}     theme_color   : цвет заголовка для Chrome, Firefox OS and Opera
 # * {string}  color_scheme  : объявление поддержки системной темы
 # * {boolean} gfonts_preload: включение предзагрузки данных с fonts.googleapis.com
-robots: "index,follow" # `null`, если не хотите использовать
-theme_color : "#ffffff"
-color_scheme: "dark light"
+robots        : "index,follow" # `null`, если не хотите использовать
+theme_color   : "#ffffff"
+color_scheme  : "dark light"
 gfonts_preload: false
 
 # ? браузер QQ
