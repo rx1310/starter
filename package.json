@@ -1,5 +1,6 @@
 {
 	"devDependencies": {
-    "@11ty/eleventy": "^1.0.0"
+    "@11ty/eleventy": "^1.0.0",
+    "@rx1310/kalium19": "^3.0.4"
   }
 }
