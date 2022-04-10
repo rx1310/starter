@@ -20,6 +20,8 @@
 /// @author Haba Kudzaev (rx1310)
 /// @link https://github.com/91muilak GitHub-репозиторий
 /// @param {boolean} $color-scheme - генерация свойства `color-scheme`
+/// @param {boolean} $theme-generated-warn - уведомление в консоли при генерации темы
 @use 'themer' as * with (
-	$color-scheme: true
+	$color-scheme: true,
+	$theme-generated-warn: false
 );
