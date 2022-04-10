@@ -10,6 +10,7 @@
     "sass": "^1.50.0"
   },
 	"dependencies": {
-    "@rx1310/grid-v4": "^4.4.2"
+    "@rx1310/grid-v4": "^4.4.2",
+    "sanitize.css": "^13.0.0"
   }
 }
