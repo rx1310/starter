@@ -40,19 +40,19 @@ module.exports = function(cnf) {
 
 		if( outputPath && outputPath.endsWith(".html") ) {
 
-      let minified = htmlmin.minify(content, {
-        useShortDoctype: true,
-        removeComments: true,
-        collapseWhitespace: true
-      });
+			let minified = htmlmin.minify(content, {
+				useShortDoctype: true,
+				removeComments: true,
+				collapseWhitespace: true
+			});
 
-      return minified;
+			return minified;
 
-    }
+		}
 
-    return content;
+		return content;
 
-  });
+	});
 
 	// ? Конфигурация markdown-it
 	let markdownLibrary = mdIt({

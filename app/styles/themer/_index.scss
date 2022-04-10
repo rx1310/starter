@@ -1,0 +1,19 @@
+@import 'themes';
+
+$color-scheme: null !default;
+
+@each $theme-name, $map in $themes {
+
+	:root[class="theme-#{$theme-name}"] {
+
+		@if $color-scheme == true {
+			color-scheme: #{$theme-name};
+		}
+
+		@each $key, $value in $map {
+			--#{$key}: #{$value};
+		}
+
+	}
+
+}

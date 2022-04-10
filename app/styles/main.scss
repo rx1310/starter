@@ -15,3 +15,11 @@
 	$bem-element: '__',
 	$bem-modifier: '--'
 );
+
+/// @name Themer
+/// @author Haba Kudzaev (rx1310)
+/// @link https://github.com/91muilak GitHub-репозиторий
+/// @param {boolean} $color-scheme - генерация свойства `color-scheme`
+@use 'themer' as * with (
+	$color-scheme: true
+);
