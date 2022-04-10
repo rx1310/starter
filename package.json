@@ -2,6 +2,7 @@
 	"devDependencies": {
     "@11ty/eleventy": "^1.0.0",
     "@rx1310/kalium19": "^3.0.4",
-    "js-yaml": "^4.1.0"
+    "js-yaml": "^4.1.0",
+    "markdown-it": "^12.3.2"
   }
 }
