@@ -1,0 +1,9 @@
+{% if uc %}
+	<meta name="screen-orientation" content="{{ uc.orientation }}">
+	<meta name="full-screen" content="{{ uc.fullscreen }}">
+	<meta name="imagemode" content="{{ uc.imagemode }}">
+	<meta name="browsermode" content="{{ uc.browsermode }}">
+	<meta name="nightmode" content="{{ 'enable' if uc.nightmode == true else 'disable' }}">
+	<meta name="layoutmode" content="{{ uc.layoutmode }}">
+	<meta name="wap-font-scale" content="{{ 'yes' if uc.wap_font_scale == true else 'no' }}">
+{% endif %}

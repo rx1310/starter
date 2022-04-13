@@ -1,0 +1,9 @@
+{% if theme_color != null %}
+	<meta name="theme-color" content="{{ theme_color }}">
+	<meta name="msapplication-TileColor" content="{{ theme_color }}">
+	<meta name="apple-mobile-web-app-status-bar-style" content="{{ theme_color }}">
+{% endif %}
+
+{% if color_scheme != null %}
+	<meta name="color-scheme" content="{{ color_scheme }}">
+{% endif %}

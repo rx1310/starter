@@ -1,0 +1,24 @@
+@import 'themes';
+
+$color-scheme: null !default;
+$theme-generated-warn: true !default;
+
+@each $theme-name, $map in $themes {
+
+	:root[class="theme-#{$theme-name}"] {
+
+		@if $color-scheme == true {
+			color-scheme: #{$theme-name};
+		}
+
+		@each $key, $value in $map {
+			--#{$key}: #{$value};
+		}
+
+		@if $theme-generated-warn == true {
+			@warn 'themer 🌚 тема #{$theme-name} сгенерирована.';
+		}
+
+	}
+
+}

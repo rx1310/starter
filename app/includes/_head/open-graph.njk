@@ -1,0 +1,11 @@
+{% if og != null %}
+	<meta property="og:url" content="{{ og.url }}">
+	<meta property="og:type" content="{{ og.type }}">
+	<meta property="og:title" content="{{ og.title }}">
+	<meta property="og:image" content="{{ og.image }}">
+	<meta property="og:image:alt" content="{{ og.image_alt }}">
+	<meta property="og:description" content="{{ og.description }}">
+	<meta property="og:site_name" content="{{ og.site_name }}">
+	<meta property="og:locale" content="{{ page.lang }}">
+	<meta property="article:author" content="{{ page.author }}">
+{% endif %}

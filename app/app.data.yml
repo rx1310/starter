@@ -1,0 +1,92 @@
+# ! основной файл конфигурации страниц
+
+# * {string} lang       : локаль страницы
+# * {string} title      : заголовок страницы
+# * {string} description: описание страницы
+# * {string} author     : автор страницы
+# * {string} app_name   : название приложения (для создания ярлыка на раб. столе)
+page:
+  lang       : "ru-RU"
+  title      : "page title"
+  description: "page description"
+  author     : "your name"
+  app_name   : "app name"
+
+# ? facebook open graph
+# * {url}    url        : ссылка на страницу
+# * {string} type       : тип страницы
+# * {string} title      : заголовок карточки
+# * {string} description: подзаголовок карточки
+# * {url}    image      : ссылка или путь к изображению карточки
+# * {string} image_alt  : описание изображения для скринридера
+# * {string} site_name  : название сайта
+og:
+  url        : "https://your.domain"
+  type       : "website"
+  title      : "open graph title"
+  description: "page description"
+  image      : "path/to/image"
+  image_alt  : "alt image description"
+  site_name  : "site name"
+
+# ? twitter
+# * {string}  card       : тип карточки
+# * {string}  site       : аккаунт сайта в Twitter
+# * {string}  creator    : аккаунт автора в Twitter
+# * {url}     url        : ссылка на страницу
+# * {string}  title      : заголовок карточки
+# * {string}  description: подзаголовок карточки
+# * {url}     image      : ссылка или путь к изображению карточки
+# * {string}  image_alt  : описание изображения для скринридера
+# * {boolean} dnt        : запретить Twitter использовать информацию о вашем сайте в целях персонализации
+twitter:
+  card       : "summary"
+  site       : "@nickname"
+  creator    : "@nickname"
+  url        : "https://your.domain"
+  title      : "twitter card title"
+  description: "card description"
+  image      : "path/to/image"
+  image_alt  : "alt image description"
+  dnt        : false
+
+# * {string}  robots        : управление поведением поисковых машин при осмотре и индексации сайта
+# * {hex}     theme_color   : цвет заголовка для Chrome, Firefox OS and Opera
+# * {string}  color_scheme  : объявление поддержки системной темы
+# * {boolean} gfonts_preload: включение предзагрузки данных с fonts.googleapis.com
+robots        : "index,follow" # `null`, если не хотите использовать
+theme_color   : "#ffffff"
+color_scheme  : "dark light"
+gfonts_preload: false
+
+# ? браузер QQ
+# * {string}  orientation: фиксирует экран в заданной ориентации [landscape,portrait]
+# * {boolean} fullscreen : отображение этого документа в полноэкранном режиме
+# * {string}  page_mode  : документ будет отображаться в "режиме приложения" (полноэкранный режим и т.д.)
+x5:
+  orientation: "portrait"
+  fullscreen : false
+  page_mode  : "app"
+
+# ? браузер UC
+# * {string}  orientation   : фиксация экрана в заданной ориентации
+# * {boolean} fullscreen    : запрет отображения этого документа в полноэкранном режиме
+# * {string}  imagemode     : браузер UC будет отображать изображения, даже если находится в "текстовом режиме"
+# * {string}  browsermode   : документ будет отображаться в "режиме приложения" (полноэкранный режим, запрещающий жест и т.д.)
+# * {boolean} nightmode     : отключение "ночного режима" браузера UC для этого документа
+# * {string}  layoutmode    : упростить документ, чтобы уменьшить передачу данных
+# * {boolean} wap_font_scale: отключить функцию браузера UC "увеличивать масштаб шрифта, когда в документе много слов"
+uc:
+  orientation   : "portrait"
+  fullscreen    : false
+  imagemode     : "force"
+  browsermode   : "application"
+  nightmode     : false
+  layoutmode    : "fitscreen"
+  wap_font_scale: false
+
+# ? Google Analytics & Яндекс.Метрика
+# * {string} google_analytics: ID GA (напр.: UA-12345678-9)
+# * {string} yandex_metrika  : ID Yandex.Metrika (напр.: 12345678)
+google_analytics: null
+yandex_metrika  : null

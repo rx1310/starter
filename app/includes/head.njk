@@ -1,0 +1,28 @@
+<meta charset="utf-8">                                               {# * определяет кодировку веб-сайта, стандартом является utf-8 #}
+<meta name="viewport" content="width=device-width, initial-scale=1"> {# * настройки viewport, связанные с мобильной отзывчивостью #}
+
+{#
+	* `width=device-width` - физическая ширина устройства (отлично подходит для мобильных устройств!)
+	* `initial-scale=1`    - начальный масштаб, 1 означает отсутствие масштабирования
+#}
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">      {# * заставить IE 8/9/10 использовать свой последний движок рендеринга #}
+<meta name="renderer" content="webkit|ie-comp|ie-stand">   {# * выбор порядка движков рендеринга для 360 Browser #}
+<meta name="HandheldFriendly" content="true">              {# * подсказывает, что сайт оптимизирован для мобильных устройств #}
+<meta name="description" content="{{ page.description }}"> {# * короткое описание страницы (ограничение — 150 символов) #}
+
+{% include "_head/open-graph.njk" %}
+{% include "_head/twitter.njk" %}
+{% include "_head/google-analytics.njk" %}
+{% include "_head/yandex-metrika.njk" %}
+{% include "_head/robots.njk" %}
+{% include "_head/theme-color.njk" %}
+{% include "_head/app.njk" %}
+{% include "_head/browser-qq.njk" %}
+{% include "_head/browser-uc.njk" %}
+{% include "_head/other.njk" %}
+{% include "_head/favicons.njk" %}
+{% include "_head/fonts.njk" %}
+{% include "_head/stylesheets.njk" %}
+
+<title>{{ page.title }}</title> {# * заголовок страницы #}

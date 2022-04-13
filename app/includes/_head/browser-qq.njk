@@ -1,0 +1,5 @@
+{% if x5 != null %}
+	<meta name="x5-orientation" content="{{ x5.orientation }}"> {# * фиксирует экран в заданной ориентации #}
+	<meta name="x5-fullscreen" content="{{ x5.fullscreen }}">   {# * запрет отображения этого документа в полноэкранном режиме #}
+	<meta name="x5-page-mode" content="{{ x5.page_mode }}">     {# * документ будет отображаться в "режиме приложения" (полноэкранный режим и т.д.)  #}
+{% endif %}
