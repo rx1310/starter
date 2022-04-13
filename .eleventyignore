@@ -1,0 +1,4 @@
+app/styles/**/*.md
+app/includes/**/*.md
+app/layouts/**/*.md
+app/scripts/**/*.md
