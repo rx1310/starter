@@ -85,7 +85,7 @@ uc:
   layoutmode    : "fitscreen"
   wap_font_scale: false
 
-# ? Google Analytics
+# ? Google Analytics & Яндекс.Метрика
 # * {string} google_analytics: ID GA (напр.: UA-12345678-9)
 # * {string} yandex_metrika  : ID Yandex.Metrika (напр.: 12345678)
 google_analytics: null
