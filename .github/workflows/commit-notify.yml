@@ -5,6 +5,7 @@ on:
     branches:
       - main
       - develop
+      - action/notify-discord
 
 jobs:
   sendMessage:
