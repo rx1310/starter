@@ -8,10 +8,10 @@ on:
 
 jobs:
   sendMessage:
-    name: Отправка сообщения с информацией о коммите в чат Telegram
+    name: Отправка сообщения с информацией о коммите
     runs-on: ubuntu-latest
     steps:
-      - name: Отправка сбщ.
+      - name: Отправка сбщ. в Telegram
         uses: appleboy/telegram-action@master
         with:
           to: ${{ secrets.TG_GROUP }}
@@ -19,3 +19,10 @@ jobs:
           format: markdown
           message: |
             👀 Я заметил какие-то изменения в репозитории [${{ github.repository }}](https://github.com/${{ github.repository }}) от [@${{ github.actor }}](https://github.com/${{ github.actor }})! Посл. коммит который он добавил: «${{ github.event.commits[0].message }}» и его хеш-сумма: [${{github.sha}}](https://github.com/${{ github.repository }}/commit/${{github.sha}}).
+      - name: Отправка сбщ. в Discord
+        uses: Sniddl/discord-commits@v1.3
+        with:
+          webhook: ${{ secrets.DISCORD_WEBHOOK }}
+          message: "Successful commit to **{{ github.context.payload.repository.owner.name }}/{{ github.context.payload.repository.name}}**.\nDiff: {{ github.context.payload.compare }}"
+          embed: '{ "title": "{{ commit.title }}", "description": "{{ commit.description }}", "url": "{{ commit.url }}", "author": { "name": "{{ commit.author.name }} ({{ commit.author.username }})", "icon_url": "https://avatars.io/gravatar/{{ commit.author.email }}"} }'
+          last-commit-only: false
