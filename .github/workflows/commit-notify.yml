@@ -20,6 +20,7 @@ jobs:
           format: markdown
           message: |
             👀 Я заметил какие-то изменения в репозитории [${{ github.repository }}](https://github.com/${{ github.repository }}) от [@${{ github.actor }}](https://github.com/${{ github.actor }})! Посл. коммит который он добавил: «${{ github.event.commits[0].message }}».
+
             🔗 Ссылка на коммит: [${{github.sha}}](https://github.com/${{ github.repository }}/commit/${{github.sha}})
       - name: Отправка сбщ. в Discord
         uses: Sniddl/discord-commits@v1.3
