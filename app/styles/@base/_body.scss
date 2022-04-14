@@ -1,8 +1,10 @@
 body {
 
-	margin         : 0;
-	scroll-behavior: k19.map-deep-get($base, scroll-behavior);
-	font-family    : k19.map-deep-get($base, font-family);
+	background-color: k19.map-deep-get($base, background-color);
+	color           : k19.map-deep-get($base, color);
+	margin          : 0;
+	scroll-behavior : k19.map-deep-get($base, scroll-behavior);
+	font-family     : k19.map-deep-get($base, font-family);
 
 	// ? https://developer.mozilla.org/en-US/docs/Web/CSS/font-smooth
 	-webkit-font-smoothing: antialiased;
@@ -18,10 +20,12 @@ body {
 	}
 
 	// ? https://clck.ru/NNamf
-	@include k19.prefixer(
-		text-size-adjust,
-		k19.map-deep-get($base, text-size-adjust),
-		webkit moz ms
-	);
+	@if k19.map-deep-get($base, text-size-adjust) != null {
+		@include k19.prefixer(
+			text-size-adjust,
+			k19.map-deep-get($base, text-size-adjust),
+			webkit moz ms
+		);
+	}
 
 }

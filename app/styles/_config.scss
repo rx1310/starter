@@ -1,15 +1,23 @@
 /// @name Base
-/// @param {string} font-family      - тип шрифта
+/// @access public
+/// @param {string} background-color - цвет фона из _themes.scss
+/// @param {string} color            - цвет текста из _themes.scss
+/// @param {string} font-family      - тип шрифта (список через запятую указывать в скобках)
 /// @param {string} user-select      - значение свойства `user-select`
 /// @param {string} scroll-behavior  - свойство, которое определяет поведение прокрутки для любого элемента на странице
 /// @param {string} text-size-adjust - контролирует алгоритм увеличения текста, используемый на некоторых смартфонах и планшетах (другие браузеры будут игнорировать это свойство)
 $base: (
 
-	font-family     : null,
-	user-select     : null,
-	scroll-behavior : smooth,
-	text-size-adjust: 100%,
+	// ? если указать `null`, то свойство не будет сгенерировано
+	background-color: null,   // ? Example: var(--colorBackground)
+	color           : null,   // ? Example: var(--colorFont)
+	font-family     : null,   // ? Example: (Gill Sans Extrabold, sans-serif)
+	user-select     : null,   // ? Example: contain / all / text / none / etc...
+	scroll-behavior : smooth, // ? Example: auto / smooth / etc...
+	text-size-adjust: 100%,   // ? Example: 100% / auto / none / etc...
 
+	/// @name Base:Typography
+	/// @access public
 	/// @param {string} font-size    - обычный размер шрифта
 	/// @param {string} font-size_lg - большой размер шрифта
 	/// @param {string} font-size_sm - меньший размер шрифта
