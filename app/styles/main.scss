@@ -3,6 +3,7 @@
 /// модули из SASS
 @use 'sass:math';
 @use 'sass:map';
+@use 'sass:string';
 
 /// @name Kalium19
 /// @author Haba Kudzaev (rx1310)
@@ -26,5 +27,9 @@
 	$theme-generated-warn: false
 );
 
+/// @name Configs
+/// @link https://github.com/91muilak GitHub-репозиторий
+@use 'config' as *;
 
+@import '@base';   /// общие стили
 @import '@header'; /// стили для Header

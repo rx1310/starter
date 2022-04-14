@@ -1,0 +1,27 @@
+body {
+
+	margin         : 0;
+	scroll-behavior: k19.map-deep-get($base, scroll-behavior);
+	font-family    : k19.map-deep-get($base, font-family);
+
+	// ? https://developer.mozilla.org/en-US/docs/Web/CSS/font-smooth
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+
+	// ? https://developer.mozilla.org/ru/docs/Web/CSS/user-select
+	@if k19.map-deep-get($base, user-select) != null {
+		@include k19.prefixer(
+			user-select,
+			k19.map-deep-get($base, user-select),
+			webkit moz ms
+		);
+	}
+
+	// ? https://clck.ru/NNamf
+	@include k19.prefixer(
+		text-size-adjust,
+		k19.map-deep-get($base, text-size-adjust),
+		webkit moz ms
+	);
+
+}
