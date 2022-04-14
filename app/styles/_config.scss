@@ -1,3 +1,4 @@
+// ! конфиги для базовых стилей / @base
 /// @name Base
 /// @access public
 /// @param {string} background-color - цвет фона из _themes.scss
@@ -42,3 +43,8 @@ $base: (
 	)
 
 ) !default;
+
+// ! конфиги для Header / @header
+/// @name Header
+/// @access public
+$header: ()
