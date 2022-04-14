@@ -24,15 +24,6 @@ jobs:
         uses: Sniddl/discord-commits@v1.3
         with:
           webhook: ${{ secrets.DISCORD_WEBHOOK }}
-          message: "👀 Я заметил какие-то изменения в репозитории **{{ github.context.payload.repository.owner.name }}/{{ github.context.payload.repository.name}}** от @{{ commit.author.name }}.\nDiff: {{ github.context.payload.compare }}"
-          embed: '
-            {
-              "title": "{{ commit.title }}",
-              "description": "{{ commit.description }}",
-              "url": "{{ commit.url }}",
-              "author": {
-                "name": "{{ commit.author.name }} ({{ commit.author.username }})",
-                "icon_url": "https://avatars.io/gravatar/{{ commit.author.email }}"
-              }
-            }'
+          message: "👀 Я заметил какие-то изменения в репозитории **{{ github.context.payload.repository.owner.name }}/{{ github.context.payload.repository.name}}** от @{{ commit.author.name }}!\nDiff:    Посл. коммит который он добавил: «{{ commit.title }}» и его Diff: {{ github.context.payload.compare }}."
+          embed: '{ "title": "{{ commit.title }}", "description": "{{ commit.description }}", "url": "{{ commit.url }}", "author": { "name": "{{ commit.author.name }} ({{ commit.author.username }})", "icon_url": "https://avatars.io/gravatar/{{ commit.author.email }}"} }'
           last-commit-only: false
