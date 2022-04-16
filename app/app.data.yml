@@ -21,6 +21,7 @@ page:
 # * {string} image_alt  : описание изображения для скринридера
 # * {string} site_name  : название сайта
 og:
+  enable     : false
   url        : "https://your.domain"
   type       : "website"
   title      : "open graph title"
@@ -40,6 +41,7 @@ og:
 # * {string}  image_alt  : описание изображения для скринридера
 # * {boolean} dnt        : запретить Twitter использовать информацию о вашем сайте в целях персонализации
 twitter:
+  enable     : false
   card       : "summary"
   site       : "@nickname"
   creator    : "@nickname"
