@@ -2,9 +2,14 @@ body {
 
 	background-color: k19.map-deep-get($base, background-color);
 	color           : k19.map-deep-get($base, color);
-	scroll-behavior : k19.map-deep-get($base, scroll-behavior);
 	font-family     : k19.map-deep-get($base, font-family);
 	margin          : 0;
+	
+	@if k19.map-deep-get($base, scroll-behavior) != null {
+		@media (prefers-reduced-motion: no-preference) {
+			scroll-behavior : k19.map-deep-get($base, scroll-behavior);
+		}
+	}
 
 	// ? https://developer.mozilla.org/en-US/docs/Web/CSS/font-smooth
 	-webkit-font-smoothing: antialiased;
