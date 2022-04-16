@@ -1,6 +1,11 @@
+/// @name Themes
+/// @access public
+/// @author Haba Kudzaev (rx1310)
+/// @link https://github.com/rx1310
+/// Описание всех переменных есть в файле README.md рядом с этим файлом
 $themes: (
 
-	// светлая тема
+	// ? светлая тема
 	light: (
 
 		colorAccent    : #026ad3,
@@ -14,7 +19,7 @@ $themes: (
 
 	),
 
-	// темная тема
+	// ? темная тема
 	dark: (
 
 		colorAccent    : #2592fb,
