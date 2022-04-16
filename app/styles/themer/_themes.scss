@@ -8,9 +8,7 @@ $themes: (
 		colorFont      : #111111,
 		colorDivider   : #ededed,
 
-		/// @name Header
-		/// @param header_colorBackground - цвет фона в светлой теме
-		/// @param header_colorDivider - цвет бордера в светлой теме
+		// * Header
 		header_colorBackground: #fbfbfb,
 		header_colorDivider: var(--colorDivider)
 
@@ -24,9 +22,7 @@ $themes: (
 		colorFont      : #fcfcfd,
 		colorDivider   : #101115,
 
-		/// @name Header
-		/// @param header_colorBackground - цвет фона в темной теме
-		/// @param header_colorDivider - цвет бордера в темной теме
+		// * Header
 		header_colorBackground: #0b0b0d,
 		header_colorDivider: var(--colorDivider)
 
