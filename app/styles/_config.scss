@@ -17,6 +17,7 @@ $base: (
 	scroll-behavior : smooth,                 // ? Example: auto / smooth / etc...
 	text-size-adjust: 100%,                   // ? Example: 100% / auto / none / etc...
 
+	// ? если указать `null`, то свойство не будет сгенерировано
 	font-family-sans     : (system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"),
 	font-family-monospace: (SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace),
 
