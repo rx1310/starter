@@ -1,7 +1,17 @@
 $themes: (
 
 	// светлая тема
-	light: (),
+	light: (
+
+		colorAccent    : #0254f3,
+		colorBackground: #ffffff,
+		colorFont      : #34383c,
+		colorDivider   : #e7e7e7,
+
+		header_colorBackground: var(--colorBackground),
+		header_colorDivider: var(--colorDivider)
+
+	),
 
 	// темная тема
 	dark: ()

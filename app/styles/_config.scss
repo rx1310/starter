@@ -51,4 +51,31 @@ $base: (
 // ! конфиги для Header / @header
 /// @name Header
 /// @access public
-$header: ()
+/// @param {string} background-color - значение свойства `background-color`
+/// @param {string} border-color - цвет бордера снизу
+/// @param {int}    border-width - ширина бордера снизу
+$header: (
+
+	background-color: var(--header_colorBackground),
+	border-color    : var(--header_colorDivider),
+	border-width    : 1px,
+
+	/// @name Header:Image
+	/// @access public
+	/// @param {string} position      - положение изображения (right / left)
+	/// @param {int}    border-radius - радиус закругления
+	/// @param {int}    size          - размер изображения (используется в `height` и `width`)
+	image: (
+		position: right,
+		border-radius: 100%,
+		size: 100px,
+	),
+
+	/// @name Header:Description
+	/// @access public
+	/// @param {int} opacity - значение прозрачности
+	description: (
+		opacity: .9
+	)
+
+);

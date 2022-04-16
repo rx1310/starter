@@ -1,3 +1,5 @@
+@import 'mixins';
+
 /// @name Header
 /// @author Haba Kudzaev (rx1310)
 /// @link https://github.com/rx1310
@@ -5,20 +7,57 @@
 /// @require Kalium19
 @include k19.b(header) {
 
-	/// @name Header:Wrapper
-	/// @arg {string} wrapper
-	@include k19.e(wrapper) {}
+	background-color: k19.map-deep-get($header, background-color);
+	border-bottom: k19.map-deep-get($header, border-width) solid k19.map-deep-get($header, border-color);
+
+	/// @name Header:Content
+	/// @arg {string} content
+	@include k19.e(content) {
+
+	}
 
 	/// @name Header:Image
 	/// @arg {string} image
-	@include k19.e(image) {}
+	@include k19.e(image) {
+
+		/// размер изображения
+		width : k19.map-deep-get($header, image, size);
+		height: k19.map-deep-get($header, image, size);
+
+		/// положение изображения (right иль left)
+		@if k19.map-deep-get($header, image, position) == right {
+			@include image-position(right, 0 0 1em 1em);
+		} @else if k19.map-deep-get($header, image, position) == left {
+			@include image-position(left, 0 1em 1em 0);
+		}
+
+		/// @name Kalium19:Mixin:BorderRadius
+		/// @arg {string} borderRadius - значение свойства `border-radius`
+		/// @require Kalium19
+		@include k19.border-radius(
+			k19.map-deep-get($header, image, border-radius)
+		);
+
+	}
 
 	/// @name Header:Title
 	/// @arg {string} title
-	@include k19.e(title) {}
+	@include k19.e(title) {
+		margin-top: .8em;
+		font-size : k19.map-deep-get($base, typography, font-size_h3);
+	}
 
 	/// @name Header:Description
 	/// @arg {string} description
-	@include k19.e(description) {}
+	@include k19.e(description) {
+
+		/// @name Kalium19:Mixin:Opacity
+		/// @arg {int} opacity - значение свойства `opacity`
+		/// @require Kalium19
+		@include k19.opacity(
+			k19.map-deep-get($header, description, opacity)
+		);
+
+	}
 
 }

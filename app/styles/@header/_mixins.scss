@@ -1,0 +1,10 @@
+/// @name ImagePosition
+/// @access private
+/// @author Haba Kudzaev (rx1310)
+/// @link https://github.com/rx1310
+/// @arg {string} $position - значение свойства `float`
+/// @arg {list} $margin - список параметров свойтсва `margin`
+@mixin image-position($position, $margin) {
+	float : $position;
+	margin: $margin;
+}
