@@ -3,19 +3,22 @@
 /// @access public
 /// @param {string} background-color - цвет фона из _themes.scss
 /// @param {string} color - цвет текста из _themes.scss
-/// @param {string} font-family - тип шрифта (список через запятую указывать в скобках)
 /// @param {string} user-select - значение свойства `user-select`
 /// @param {string} scroll-behavior - свойство, которое определяет поведение прокрутки для любого элемента на странице
 /// @param {string} text-size-adjust - контролирует алгоритм увеличения текста, используемый на некоторых смартфонах и планшетах (другие браузеры будут игнорировать это свойство)
+/// @param {list}   font-family-sans - шрифты sans-serif
+/// @param {list}   font-family-monospace - monospace-шрифты
 $base: (
 
 	// ? если указать `null`, то свойство не будет сгенерировано
-	background-color: null,   // ? Example: var(--colorBackground)
-	color           : null,   // ? Example: var(--colorFont)
-	font-family     : null,   // ? Example: (Gill Sans Extrabold, sans-serif)
-	user-select     : null,   // ? Example: contain / all / text / none / etc...
-	scroll-behavior : smooth, // ? Example: auto / smooth / etc...
-	text-size-adjust: 100%,   // ? Example: 100% / auto / none / etc...
+	background-color: var(--colorBackground), // ? Example: var(--colorBackground)
+	color           : var(--colorFont),       // ? Example: var(--colorFont)
+	user-select     : null,                   // ? Example: contain / all / text / none / etc...
+	scroll-behavior : smooth,                 // ? Example: auto / smooth / etc...
+	text-size-adjust: 100%,                   // ? Example: 100% / auto / none / etc...
+
+	font-family-sans     : (system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"),
+	font-family-monospace: (SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace),
 
 	/// @name Base:Typography
 	/// @access public
