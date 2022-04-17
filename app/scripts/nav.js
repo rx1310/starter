@@ -6,7 +6,7 @@ const navActionDisabled = "nav__action--disabled";
 
 window.addEventListener('scroll', (e) => {
 
-	if (window.pageYOffset > 150) {
+	if (window.pageYOffset > 100) {
 
 		nav.classList.add(navScrolledClass);
 		navTitle.classList.remove('hidden');

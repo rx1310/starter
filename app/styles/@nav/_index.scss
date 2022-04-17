@@ -114,6 +114,7 @@
 		font-size     : k19.map-deep-get($base, typography, font-size_h6);
 		color         : inherit;
 		text-transform: lowercase;
+		text-align    : center;
 
 		/// класс, скрывающий текст
 		&.hidden { color: transparent; }
