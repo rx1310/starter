@@ -15,7 +15,16 @@ $themes: (
 
 		// * Header
 		header_colorBackground: #fbfbfb,
-		header_colorDivider: var(--colorDivider)
+		header_colorDivider: var(--colorDivider),
+
+		// * Nav
+		nav_colorBackground: var(--header_colorBackground),
+		nav_colorBackground--scrolled: var(--colorBackground),
+		nav_boxShadow: rgba(0, 0, 0, 0.16) 0px 1px 4px,
+		nav-action_colorBackground--hover: #c9c9c9,
+		nav-action_colorBackground--active: var(--colorAccent),
+		nav-action_colorIcon--active: #ffffff,
+
 
 	),
 
@@ -29,7 +38,15 @@ $themes: (
 
 		// * Header
 		header_colorBackground: #0b0b0d,
-		header_colorDivider: var(--colorDivider)
+		header_colorDivider: var(--colorDivider),
+
+		// * Nav
+		nav_colorBackground: var(--header_colorBackground),
+		nav_colorBackground--scrolled: var(--header_colorBackground),
+		nav_boxShadow: rgb(0, 0, 0) 0px 1px 4px,
+		nav-action_colorBackground--hover: #33343c,
+		nav-action_colorBackground--active: var(--colorAccent),
+		nav-action_colorIcon--active: var(--header_colorBackground),
 
 	)
 

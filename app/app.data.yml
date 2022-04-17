@@ -59,7 +59,7 @@ twitter:
 robots        : "index,follow" # `null`, если не хотите использовать
 theme_color   : "#ffffff"
 color_scheme  : "dark light"
-gfonts_preload: false
+gfonts_preload: true
 
 # ? браузер QQ
 # * {string}  orientation: фиксирует экран в заданной ориентации [landscape,portrait]

@@ -7,8 +7,8 @@
 /// @require Kalium19
 @include k19.b(header) {
 
-	background-color: k19.map-deep-get($header, background-color);
-	border-bottom: k19.map-deep-get($header, border-width) solid k19.map-deep-get($header, border-color);
+	background-color: var(--header_colorBackground);
+	border-bottom: k19.map-deep-get($header, border-width) solid var(--header_colorDivider);
 
 	/// @name Header:Content
 	/// @arg {string} content
@@ -30,7 +30,6 @@
 		}
 
 		/// @name Kalium19:Mixin:BorderRadius
-		/// @arg {string} borderRadius - значение свойства `border-radius`
 		/// @require Kalium19
 		@include k19.border-radius(
 			k19.map-deep-get($header, image, border-radius)
@@ -50,7 +49,6 @@
 	@include k19.e(description) {
 
 		/// @name Kalium19:Mixin:Opacity
-		/// @arg {int} opacity - значение свойства `opacity`
 		/// @require Kalium19
 		@include k19.opacity(
 			k19.map-deep-get($header, description, opacity)

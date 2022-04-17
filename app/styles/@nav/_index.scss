@@ -3,4 +3,191 @@
 /// @link https://github.com/rx1310
 /// @arg {string} nav
 /// @require Kalium19
-@include k19.b(nav) {}
+@include k19.b(nav) {
+
+	position: sticky;          // * устанавливает липкое позиционирование
+	position: -webkit-sticky;  // * устанавливает липкое позиционирование (для WebKit)
+	top     : 0;
+	z-index : 999;
+
+	/// добавляет фон из цвета Header
+	&::before {
+
+    content         : "";
+    background-color: var(--nav_colorBackground);
+    position        : absolute;
+    height          : 100%;
+    width           : 100%;
+    left            : 0;
+
+    /// @name Kalium19:Mixin:Opacity
+		/// @require Kalium19
+		/// добавляет прозрачность
+		@include k19.opacity(k19.map-deep-get($nav, opacity));
+
+		/// @name Kalium19:Mixin:Transition
+		/// @require Kalium19
+		/// анимирует переходы
+		@include k19.transition(
+			background-color k19.map-deep-get($nav, transition-duration) k19.map-deep-get($nav, transition-timing-function),
+			box-shadow k19.map-deep-get($nav, transition-duration) k19.map-deep-get($nav, transition-timing-function),
+			opacity k19.map-deep-get($nav, transition-duration) k19.map-deep-get($nav, transition-timing-function),
+		);
+
+	}
+
+	/// @name Nav:Scrolled
+	/// @arg {string} scrolled
+	/// @require Kalium19
+	@include k19.m(scrolled) {
+
+		&::before {
+
+			content         : "";
+			background-color: var(--nav_colorBackground--scrolled);
+
+			/// @name Kalium19:Mixin:Opacity
+			/// @require Kalium19
+			/// убирает полупрозрачность
+			@include k19.opacity(1);
+
+			/// @name Kalium19:Mixin:BoxShadow
+			/// @require Kalium19
+			/// добавляет тень
+			@include k19.box-shadow(var(--nav_boxShadow));
+
+		}
+
+	}
+
+	/// @name Nav:Content
+	/// @arg {string} content
+	/// @require Kalium19
+	@include k19.e(content) {
+
+		padding : .5em 0;
+
+		/// @name Kalium19:Mixin:Flexbox
+		/// @require Kalium19
+		@include k19.flexbox();
+
+		/// @name Kalium19:Mixin:JustifyContent
+		/// @require Kalium19
+		@include k19.justify-content(space-between);
+
+		/// @name Kalium19:Mixin:AlignItems
+		/// @require Kalium19
+		@include k19.align-items(center);
+
+	}
+
+	/// @name Nav:Title
+	/// @arg {string} title
+	/// @require Kalium19
+	@include k19.e(title) {
+
+		/// @name Kalium19:Mixin:Transition
+		/// @require Kalium19
+		/// анимирует переходы
+		@include k19.transition(
+			color k19.map-deep-get($nav, transition-duration)
+		);
+
+		margin        : 0;
+		font-size     : k19.map-deep-get($base, typography, font-size_h6);
+		color         : inherit;
+		text-transform: lowercase;
+
+		/// класс, скрывающий текст
+		&.hidden { color: transparent; }
+
+	}
+
+	/// @name Nav:Action
+	/// @arg {string} action
+	/// @require Kalium19
+	@include k19.e(action) {
+
+		width          : k19.map-deep-get($nav, action-size);
+		height         : k19.map-deep-get($nav, action-size);
+		vertical-align : middle;
+		position       : relative;
+		overflow       : hidden;
+		text-decoration: none;
+		border         : none;
+		cursor         : pointer;
+		color          : var(--colorFont);
+		background     : transparent;
+
+		/// @name Kalium19:Mixin:Flexbox
+		/// @require Kalium19
+		@include k19.flexbox();
+
+		/// @name Kalium19:Mixin:JustifyContent
+		/// @require Kalium19
+		@include k19.justify-content(center);
+
+		/// @name Kalium19:Mixin:AlignItems
+		/// @require Kalium19
+		@include k19.align-items(center);
+
+		/// @name Kalium19:Mixin:BorderRadius
+		/// @require Kalium19
+		@include k19.border-radius(100%);
+
+		/// @name Kalium19:Mixin:Transition
+		/// @require Kalium19
+		@include k19.transition(
+			color k19.map-deep-get($nav, transition-duration),
+			background k19.map-deep-get($nav, transition-duration),
+			opacity k19.map-deep-get($nav, transition-duration)
+		);
+
+		&:hover,
+		&:focus {
+			background: var(--nav-action_colorBackground--hover)
+		}
+
+		&::before:hover {
+
+			width   : k19.map-deep-get($nav, action-size);
+			height  : k19.map-deep-get($nav, action-size);
+			display : block;
+			content : '';
+			position: absolute;
+			top     : 0;
+
+		}
+
+		&:active {
+
+			/// @name Kalium19:Mixin:PropsApply
+			/// @require Kalium19
+			@include k19.props-apply((
+				background: nav-action_colorBackground--active,
+				color: nav-action_colorIcon--active,
+			));
+
+		}
+
+		&:first-child { margin-left : -9px; }
+		&:last-child  { margin-right: -7px; }
+
+		/// @name Nav:Action:Disabled
+		/// @arg {string} disabled
+		/// @require Kalium19
+		@include k19.m(disabled) {
+
+			pointer-events: none;
+			cursor        : not-allowed;
+
+			/// @name Kalium19:Mixin:Opacity
+			/// @require Kalium19
+			/// добавляет прозрачность
+			@include k19.opacity(0.20);
+
+		}
+
+	}
+
+}

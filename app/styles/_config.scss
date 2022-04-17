@@ -51,14 +51,10 @@ $base: (
 // ! конфиги для Header / @header
 /// @name Header
 /// @access public
-/// @param {string} background-color - значение свойства `background-color`
-/// @param {string} border-color - цвет бордера снизу
 /// @param {int}    border-width - ширина бордера снизу
 $header: (
 
-	background-color: var(--header_colorBackground),
-	border-color    : var(--header_colorDivider),
-	border-width    : 1px,
+	border-width: 1px,
 
 	/// @name Header:Image
 	/// @access public
@@ -66,9 +62,9 @@ $header: (
 	/// @param {int}    border-radius - радиус закругления
 	/// @param {int}    size          - размер изображения (используется в `height` и `width`)
 	image: (
-		position: right,
+		position     : right,
 		border-radius: 100%,
-		size: 100px,
+		size         : 100px,
 	),
 
 	/// @name Header:Description
@@ -83,4 +79,15 @@ $header: (
 // ! конфиги для Nav / @nav
 /// @name Nav
 /// @access public
-$nav: ();
+/// @param {int}    opacity - значение прозрачности фона до состояния `scrolled`
+/// @param {int}    transition-duration - время перехода
+/// @param {string} transition-timing-function - устанавливает, насколько быстро должно изменяться значение стилевого свойство для которого применяется эффект перехода
+$nav: (
+
+	opacity                   : .9,
+	transition-duration       : .3s,
+	transition-timing-function: linear,   // ? https://developer.mozilla.org/en-US/docs/Web/CSS/transition-timing-function
+
+	action-size: 38px,
+
+);
