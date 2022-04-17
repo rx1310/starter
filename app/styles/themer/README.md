@@ -17,6 +17,13 @@
 - секция для Header:
   - `header_colorBackground` - цвет фона Header
   - `header_colorDivider` - цвет бордера Header
+- секция для Nav:
+  -	`nav_colorBackground` - цвет фона Nav
+  -	`nav_colorBackground--scrolled` - цвет фона Nav при скроле вниз
+  -	`nav_boxShadow` - тень Nav
+  -	`nav-action_colorBackground--hover` - цвет кнопки при наведении
+  -	`nav-action_colorBackground--active` - цвет кнопки при нажатии
+  -	`nav-action_colorIcon--active` - цвет иконки в кнопке при нажатии
 - ...
 
 *В процессе написания...*
