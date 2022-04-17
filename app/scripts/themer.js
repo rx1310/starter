@@ -7,7 +7,7 @@ const themes = {
 
 const colors = {
 	light: "#ffffff",
-	dark: "#161b22"
+	dark: "#0b0b0d"
 };
 
 function themerSet(theme, color) {
