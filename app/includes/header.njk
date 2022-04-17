@@ -15,8 +15,23 @@
 					{% endif %}
 
 					<div>
-						<h1 class="header__title">{{ header.title }}</h1>
-						<p class="header__description">{{ header.description }}</p>
+
+						<h1 class="header__title">
+							{% if header.title == "default" %}
+								{{ page.title }}
+							{% else %}
+								{{ header.title }}
+							{% endif %}
+						</h1>
+
+						<p class="header__description">
+							{% if header.description == "default" %}
+								{{ page.description }}
+							{% else %}
+								{{ header.description }}
+							{% endif %}
+						</p>
+
 					</div>
 
 				</div>

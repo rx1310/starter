@@ -7,8 +7,8 @@
 # * {string} app_name   : название приложения (для создания ярлыка на раб. столе)
 page:
   lang       : "ru-RU"
-  title      : "page title"
-  description: "page description"
+  title      : "Page Pitle"
+  description: "Page Description"
   author     : "your name"
   app_name   : "app name"
 
