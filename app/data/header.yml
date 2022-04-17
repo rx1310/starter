@@ -4,7 +4,7 @@
 # * {string} image_alt  : альтернативное описание изображения
 # * {string} title      : заголовок
 # * {string} description: типо подзаголовка или просто описание страницы
-image      : "https://avatars.githubusercontent.com/u/33829769?v=4"
+image      : "https://avatars.githubusercontent.com/u/33829769?v=4" # оставьте `null`, если не нужно изображение в Header
 image_alt  : "Image Alt"
 title      : "Header title"
 description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto pariatur architecto atque ipsum animi eligendi maiores saepe officia recusandae at reprehenderit accusantium vel sed, id nisi nostrum ducimus! Modi, consectetur."
