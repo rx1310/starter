@@ -1,8 +1,8 @@
 # ! основной файл конфигурации Nav
 
-# * {string}  title          : заголовок Nav (оставьте `default`, чтобы бралось значение из page.title)
-# * {boolean} action_back    : отображение кнопки "Назад"
-# * {boolean} action_scrollUp: отображение кнопки "К началу страницы"
-title          : default
-action_back    : true
-action_scrollUp: true
+# * {string} title       : заголовок Nav (оставьте `default`, чтобы бралось значение из page.title)
+# * {string} action_left : кнопка в левой стороне
+# * {string} action_right: кнопка в правой стороне
+title       : "Заголовок Nav"
+action_left : null # доступно: home, back
+action_right: null # доступно: scrollup

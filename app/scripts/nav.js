@@ -10,13 +10,19 @@ window.addEventListener('scroll', (e) => {
 
 		nav.classList.add(navScrolledClass);
 		navTitle.classList.remove('hidden');
-		navScrollUp.classList.remove(navActionDisabled);
+
+		if (document.body.contains(navScrollUp)) {
+			navScrollUp.classList.remove(navActionDisabled);
+		}
 
 	} else {
 
 		nav.classList.remove(navScrolledClass);
 		navTitle.classList.add('hidden');
-		navScrollUp.classList.add(navActionDisabled);
+
+		if (document.body.contains(navScrollUp)) {
+			navScrollUp.classList.add(navActionDisabled);
+		}
 
 	}
 

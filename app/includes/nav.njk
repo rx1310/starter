@@ -4,13 +4,18 @@
 			<div class="col-12">
 				<div class="nav__content">
 
-					{% if nav.action_back != false %}
+					{% if nav.action_left == 'back' %}
 						<button
 					 		class="nav__action material-icons"
 					 		title="Назад"
 							aria-label="Назад"
 							onclick="history.back()">navigate_before</button>
-					{# {% elif nav.action_menu != false %} #}
+					{% elif nav.action_left == 'home' %}
+						<button
+					 		class="nav__action material-icons"
+					 		title="На главную"
+							aria-label="На главную"
+							onclick="window.open('./','_self')">home</button>
 					{% else %}
 						<span class="nav__action" disabled></span>
 					{% endif %}
@@ -23,13 +28,15 @@
 						{% endif %}
 					</h5>
 
-					{% if nav.action_scrollUp != false %}
+					{% if nav.action_right == 'scrollup' %}
 						<button
 					 		class="nav__action nav__action--disabled material-icons"
 					 		title="К началу страницы"
 							aria-label="К началу страницы"
 							onclick="scrollUp()"
 							id="scrollUp">keyboard_double_arrow_up</button>
+					{% else %}
+						<span class="nav__action" disabled></span>
 					{% endif %}
 
 				</div>

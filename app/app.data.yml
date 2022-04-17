@@ -7,10 +7,10 @@
 # * {string} app_name   : название приложения (для создания ярлыка на раб. столе)
 page:
   lang       : "ru-RU"
-  title      : "Page Pitle"
-  description: "Page Description"
-  author     : "your name"
-  app_name   : "app name"
+  title      : "Заголовок страницы"
+  description: "Равным образом постоянный количественный рост и сфера нашей активности обеспечивает актуальность соответствующих условий активизации."
+  author     : "Автор сайта"
+  app_name   : "Название приложения"
 
 # ? facebook open graph
 # * {url}    url        : ссылка на страницу
@@ -21,14 +21,14 @@ page:
 # * {string} image_alt  : описание изображения для скринридера
 # * {string} site_name  : название сайта
 og:
-  enable     : false
+  enable     : true
   url        : "https://your.domain"
   type       : "website"
-  title      : "open graph title"
-  description: "page description"
-  image      : "path/to/image"
-  image_alt  : "alt image description"
-  site_name  : "site name"
+  title      : "Заголовок OpenGraph"
+  description: "Равным образом постоянный количественный рост и сфера нашей активности обеспечивает актуальность соответствующих условий активизации."
+  image      : "путь/до/изображения.jpg"
+  image_alt  : "Описание изображения"
+  site_name  : "Название сайта"
 
 # ? twitter
 # * {string}  card       : тип карточки
@@ -41,15 +41,15 @@ og:
 # * {string}  image_alt  : описание изображения для скринридера
 # * {boolean} dnt        : запретить Twitter использовать информацию о вашем сайте в целях персонализации
 twitter:
-  enable     : false
+  enable     : true
   card       : "summary"
   site       : "@nickname"
   creator    : "@nickname"
   url        : "https://your.domain"
-  title      : "twitter card title"
-  description: "card description"
-  image      : "path/to/image"
-  image_alt  : "alt image description"
+  title      : "Заголовок Twitter Card"
+  description: "Равным образом постоянный количественный рост и сфера нашей активности обеспечивает актуальность соответствующих условий активизации."
+  image      : "путь/до/изображения.jpg"
+  image_alt  : "Описание изображения"
   dnt        : false
 
 # * {string}  robots        : управление поведением поисковых машин при осмотре и индексации сайта

@@ -6,5 +6,5 @@
 # * {string} description: типо подзаголовка или просто описание страницы (оставьте `default`, чтобы бралось значение из page.description)
 image      : "https://avatars.githubusercontent.com/u/33829769?v=4" # оставьте `null`, если не нужно изображение в Header
 image_alt  : "Image Alt"
-title      : default
-description: default
+title      : "Заголовок страницы"
+description: "Равным образом постоянный количественный рост и сфера нашей активности обеспечивает актуальность соответствующих условий активизации."
