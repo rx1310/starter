@@ -1,0 +1,74 @@
+// ! конфиги для базовых стилей / @base
+/// @name Base
+/// @group Styles:Base
+/// @access public
+/// @param {color} background-color - цвет фона из _themes.scss
+/// @param {color} color - цвет текста из _themes.scss
+/// @param {type}  user-select - значение свойства `user-select`
+/// @param {type}  scroll-behavior - свойство, которое определяет поведение прокрутки для любого элемента на странице
+/// @param {size}  text-size-adjust - контролирует алгоритм увеличения текста, используемый на некоторых смартфонах и планшетах (другие браузеры будут игнорировать это свойство)
+/// @param {font}  font-family-sans - шрифты sans-serif
+/// @param {font}  font-family-monospace - monospace-шрифты
+$base: (
+
+	// если указать `null`, то свойство не будет сгенерировано
+	background-color: var(--colorBackground), /// @example var(--colorBackground)
+	color           : var(--colorFont),       /// @example var(--colorFont)
+	user-select     : null,                   /// @example contain | all | text | none | etc...
+	scroll-behavior : smooth,                 /// @example auto | smooth | etc...
+	text-size-adjust: 100%,                   /// @example 100% | auto | none | etc...
+
+	// если указать `null`, то свойство не будет сгенерировано
+	font-family-sans: (
+		system-ui,
+		-apple-system,
+		"Segoe UI",
+		Roboto,
+		"Helvetica Neue",
+		"Noto Sans",
+		"Liberation Sans",
+		Arial,
+		sans-serif,
+		"Apple Color Emoji",
+		"Segoe UI Emoji",
+		"Segoe UI Symbol",
+		"Noto Color Emoji"
+	),
+
+	// если указать `null`, то свойство не будет сгенерировано
+	font-family-monospace: (
+		SFMono-Regular,
+		Menlo,
+		Monaco,
+		Consolas,
+		"Liberation Mono",
+		"Courier New",
+		monospace
+	),
+
+	/// @name Base:Typography
+	/// @access public
+	/// @param {string} font-size    - обычный размер шрифта
+	/// @param {string} font-size_lg - большой размер шрифта
+	/// @param {string} font-size_sm - меньший размер шрифта
+	/// @param {string} font-size_h1 - размер шрифта для заголовка первого уровня
+	/// @param {string} font-size_h2 - размер шрифта для заголовка второго уровня
+	/// @param {string} font-size_h3 - размер шрифта для заголовка третьего уровня
+	/// @param {string} font-size_h4 - размер шрифта для заголовка четвертого уровня
+	/// @param {string} font-size_h5 - размер шрифта для заголовка пятого уровня
+	/// @param {string} font-size_h6 - размер шрифта для заголовка шестого уровня
+	typography: (
+
+		font-size   : 1rem,
+		font-size_lg: 1rem * 1.25,
+		font-size_sm: 1rem * .875,
+		font-size_h1: 1rem * 2.5,
+		font-size_h2: 1rem * 2,
+		font-size_h3: 1rem * 1.75,
+		font-size_h4: 1rem * 1.5,
+		font-size_h5: 1rem * 1.25,
+		font-size_h6: 1rem
+
+	)
+
+) !default;

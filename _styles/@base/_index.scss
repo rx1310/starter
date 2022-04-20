@@ -1,0 +1,24 @@
+*,
+*::before,
+*::after {
+	-webkit-touch-callout: none; // https://clck.ru/9HHvq
+}
+
+@import 'body';
+@import 'img';
+@import 'typography';
+
+// * атрибут `hidden` для скрытия элемента на странице
+[hidden] {
+	@include k19.visually-hidden();
+}
+
+// * атрибут `disabled` для мута элемента на странице
+[disabled]:not([disabled="false"]) {
+
+	pointer-events: none; // https://developer.mozilla.org/ru/docs/Web/CSS/pointer-events
+	cursor: not-allowed;  // https://developer.mozilla.org/ru/docs/Web/CSS/cursor
+
+	@include k19.opacity(0.50);
+
+}

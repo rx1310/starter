@@ -1,0 +1,11 @@
+h1, h2, h3, h4, h5, h6 {
+	margin-bottom: 0.5rem;
+	font-weight: bold;
+}
+
+h1 { font-size: k19.map-deep-get($base, typography, font-size_h1); }
+h2 { font-size: k19.map-deep-get($base, typography, font-size_h2); }
+h3 { font-size: k19.map-deep-get($base, typography, font-size_h3); }
+h4 { font-size: k19.map-deep-get($base, typography, font-size_h4); }
+h5 { font-size: k19.map-deep-get($base, typography, font-size_h5); }
+h6 { font-size: k19.map-deep-get($base, typography, font-size_h6); }

@@ -1,0 +1,10 @@
+contact_links:
+  - name: Начать дискуссию
+    url: https://github.com/rx1310/starter/discussions/new
+    about: Задавайте вопросы, получайте ответы и узнавайте много нового!
+  - name: Посмотреть Issues
+    url: https://github.com/rx1310/starter/issues
+    about: Проверьте существующие Issues. Возможно до Вас проблема была обнаружена, а идея предложена.
+  - name: Перейти в Telegram
+    about: Читайте новости о развитии проекта, а также комментируйте и узнавайте подробности.
+    url: https://t.me/rx1310_live

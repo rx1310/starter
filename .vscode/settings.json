@@ -5,6 +5,7 @@
 
 	"files.exclude": {
 		"dist/"          : false,
+		".github/"       : true,
 		"node_modules"   : true,
 		".editorconfig"  : false,
 		".eleventyignore": false,

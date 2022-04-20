@@ -1,0 +1,17 @@
+# ? facebook open graph
+# * {url}    url        : ссылка на страницу
+# * {string} type       : тип страницы
+# * {string} title      : заголовок карточки
+# * {string} description: подзаголовок карточки
+# * {url}    image      : ссылка или путь к изображению карточки
+# * {string} image_alt  : описание изображения для скринридера
+# * {string} site_name  : название сайта
+enable     : false
+url        : "https://your.domain"
+type       : "website"
+title      : "Заголовок OpenGraph"
+description: "Равным образом постоянный количественный рост и сфера нашей активности обеспечивает актуальность соответствующих условий активизации."
+image      : "путь/до/изображения.jpg"
+image_alt  : "Описание изображения"
+site_name  : "Название сайта"
+

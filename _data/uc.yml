@@ -1,0 +1,15 @@
+# ? браузер UC
+# * {string}  orientation   : фиксация экрана в заданной ориентации
+# * {boolean} fullscreen    : запрет отображения этого документа в полноэкранном режиме
+# * {string}  imagemode     : браузер UC будет отображать изображения, даже если находится в "текстовом режиме"
+# * {string}  browsermode   : документ будет отображаться в "режиме приложения" (полноэкранный режим, запрещающий жест и т.д.)
+# * {boolean} nightmode     : отключение "ночного режима" браузера UC для этого документа
+# * {string}  layoutmode    : упростить документ, чтобы уменьшить передачу данных
+# * {boolean} wap_font_scale: отключить функцию браузера UC "увеличивать масштаб шрифта, когда в документе много слов"
+orientation   : "portrait"
+fullscreen    : false
+imagemode     : "force"
+browsermode   : "application"
+nightmode     : false
+layoutmode    : "fitscreen"
+wap_font_scale: false

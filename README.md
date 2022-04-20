@@ -3,6 +3,8 @@
 Стартовый шаблон для статичного сайта, написанный на [@11ty][gh_11ty], [@sass][gh_sass] (+ [@91muilak][gh_k19]) и [Nunjucks][gh_njk].
 
 ![Последний коммит](https://img.shields.io/github/last-commit/rx1310/starter)
+[![GitHub branches](https://badgen.net/github/branches/rx1310/starter)](https://github.com/rx1310/starter/)
+[![Github tag](https://badgen.net/github/tag/rx1310/starter)](https://github.com/rx1310/starter/tags/)
 ![Количество коммитов в год](https://img.shields.io/github/commit-activity/y/rx1310/starter)
 ![Количество ЯП](https://img.shields.io/github/languages/count/rx1310/starter?color=fff)
 ![Топ ЯП](https://img.shields.io/github/languages/top/rx1310/starter?color=C76494)
@@ -14,19 +16,23 @@
 ![Количество закрытых PR](https://img.shields.io/github/issues-pr-closed-raw/rx1310/starter?label=closed%20PR%27s)](https://github.com/rx1310/starter/pulls)
 ![Кол-во посетителей](https://visitor-badge.laobi.icu/badge?page_id=rx1310.starter)
 ![Лицензия](https://img.shields.io/github/license/rx1310/starter)
-![Версия 11ty](https://img.shields.io/github/package-json/dependency-version/rx1310/starter/dev/@11ty/eleventy/develop?label=11ty)
-![Версия SASS](https://img.shields.io/github/package-json/dependency-version/rx1310/starter/dev/sass/develop?label=sass)
-![Версия Kalium19](https://img.shields.io/github/package-json/dependency-version/rx1310/starter/dev/@rx1310/kalium19/develop?label=kalium19)
-![Версия nunjucks](https://img.shields.io/github/package-json/dependency-version/rx1310/starter/dev/nunjucks/develop?label=nunjucks)
-![Версия markdown-it](https://img.shields.io/github/package-json/dependency-version/rx1310/starter/dev/markdown-it/develop?label=markdown-it)
-![Версия js-yaml](https://img.shields.io/github/package-json/dependency-version/rx1310/starter/dev/js-yaml/develop?label=js-yaml)
-![Версия html-minifier](https://img.shields.io/github/package-json/dependency-version/rx1310/starter/dev/html-minifier/develop?label=html-minifier)
+
+
+![Версия 11ty](https://img.shields.io/github/package-json/dependency-version/rx1310/starter/dev/@11ty/eleventy/main?color=fff)
+![Версия SASS](https://img.shields.io/github/package-json/dependency-version/rx1310/starter/dev/sass/main?color=CC6699)
+![Версия Kalium19](https://img.shields.io/github/package-json/dependency-version/rx1310/starter/dev/@rx1310/kalium19/main?color=000)
+![Версия nunjucks](https://img.shields.io/github/package-json/dependency-version/rx1310/starter/dev/nunjucks/main?color=1f4219)
+![Версия markdown-it](https://img.shields.io/github/package-json/dependency-version/rx1310/starter/dev/markdown-it/main?label=markdown-it)
+![Версия js-yaml](https://img.shields.io/github/package-json/dependency-version/rx1310/starter/dev/js-yaml/main?color=ea8a27)
+![Версия html-minifier](https://img.shields.io/github/package-json/dependency-version/rx1310/starter/dev/html-minifier/main?color=E34F26)
+
+[Открыть доску задач →][gh_project]
 
 > Проект разрабатывается в личных целях для оценки своих навыков и ради того, чтобы научить себя писать нормальный, осознанный код (+ учиться документировать свой код). Буду раз вашим [Issues](https://github.com/rx1310/starter/issues) по поводу исправления ошибок, добавления новых фич и улучшению проекта. Также со мной можно связаться в [Telegram (@rx1310)][rx1310_tg].
 
 Проект был создан для упрощения создания сайта на базе генератора статики **11ty**. Шаблон **starter** может быть интересен тем, что:
 - не нужно с нуля создавать проект и его структуру,
-- не нужно проектировать интерфейс и писать стили,
+- есть уже готовый конфиг для 11ty,
 - можно легко сконфигурировать проект под свои нужды,
 - ...
 
@@ -71,7 +77,7 @@
 | `sass:watch`   | запуск вотчера SCSS-файлов                      |
 
 ## Конфигурация
-Для начала уточню структуру проекта. Весь основной код находится в папке [app/](app/), структуру которой можно посмотреть при помощи команды [`tree app`](https://losst.ru/komanda-tree-linux).
+Для начала уточню структуру проекта. Весь основной код находится в корневой папке, структуру которой можно посмотреть при помощи команды [`tree .`](https://losst.ru/komanda-tree-linux).
 
 ### 11ty
 Итоговый (output) сайт будет находиться в папке dist/. За это отвечает файл конфигурации 11ty [.11ty.js](.11ty.js).
@@ -79,11 +85,11 @@
 ```js
 // .11ty.js
 dir: {
-  input   : 'app',       // входная точка
-  output  : 'dist',      // папка, в которую будет собран сайт
-  includes: 'includes/', // шаблоны njk
-  layouts : 'layouts/',  // шаблоны разметок njk
-  data    : "data"       // папка, в которой хранятся JSON / YAMl второстепенные файлы с конфигурацией
+  input   : '.',          // входная точка
+  output  : 'dist',       // папка, в которую будет собран сайт
+  includes: '_includes/', // шаблоны njk
+  layouts : '_layouts/',  // шаблоны разметок njk
+  data    : "_data"       // папка, в которой хранятся JSON / YAMl второстепенные файлы с конфигурацией
 }
 ```
 
@@ -105,11 +111,11 @@ cnf.setBrowserSyncConfig({
 > Если вам нужен, например, браузер Google Chrome, то пропишите `["google chrome"]`, а если нужен Google Chrome и Mozilla Firefox - `["google chrome", "firefox"]` в параметр `browser`.
 
 ### SASS
-Основной файл стилей - это [main.scss](app/styles/main.scss), к которому подключаются модули и прочее.
+Основной файл стилей - это [main.scss](_styles/main.scss), к которому подключаются модули и прочее.
 
-Есть отдельная папка [styles/vendor/](app/styles/vendor/), в которой содержатся сторонние библиотеки, которые в основном в [main.scss](app/styles/main.scss) не добавляются. Собираются они также в папку *dist/styles/vendor/*.
+Есть отдельная папка [_styles/vendor/](_styles/vendor/), в которой содержатся сторонние библиотеки, которые в основном в [main.scss](_styles/main.scss) не добавляются. Собираются они также в папку *dist/styles/vendor/*.
 
-[Подробнее →](app/styles/README.md)
+[Подробнее →](_styles/README.md)
 
 ## Лицензия
 Проект [starter](https://github.com/rx1310/starter) распространяется совершенно бесплатно и находится под защитой лицензии [MIT](LICENSE).
@@ -127,6 +133,7 @@ Copyright (c) 2022, Haba Kudzaev (rx1310) <rx1310@inbox.ru>
 [gh_sass]: https://github.com/sass
 [gh_k19]: https://github.com/91muilak
 [gh_njk]: https://github.com/mozilla/nunjucks
+[gh_project]: https://github.com/users/rx1310/projects/3
 [vscode]: https://code.visualstudio.com/
 [nodejs]: https://nodejs.org/
 [npm]: https://www.npmjs.com/

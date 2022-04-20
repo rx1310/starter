@@ -1,0 +1,21 @@
+/// @name Themes
+/// @group Themer
+/// @access public
+/// @author Haba Kudzaev (rx1310)
+/// @link https://github.com/rx1310
+/// @param {map} light - список кастомных свойств в светлой теме
+/// @param {map} dark  - список кастомных свойств в темной теме
+/// Описание всех переменных есть в файле README.md рядом с этим файлом
+$themes: (
+
+	light: (
+		colorBackground: #ffffff,
+		colorFont      : #111111,
+	),
+
+	dark: (
+		colorBackground: #17181c,
+		colorFont      : #fcfcfd,
+	)
+
+);

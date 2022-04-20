@@ -1,0 +1,20 @@
+# ? twitter
+# * {string}  card       : тип карточки
+# * {string}  site       : аккаунт сайта в Twitter
+# * {string}  creator    : аккаунт автора в Twitter
+# * {url}     url        : ссылка на страницу
+# * {string}  title      : заголовок карточки
+# * {string}  description: подзаголовок карточки
+# * {url}     image      : ссылка или путь к изображению карточки
+# * {string}  image_alt  : описание изображения для скринридера
+# * {boolean} dnt        : запретить Twitter использовать информацию о вашем сайте в целях персонализации
+enable     : false
+card       : "summary"
+site       : "@nickname"
+creator    : "@nickname"
+url        : "https://your.domain"
+title      : "Заголовок Twitter Card"
+description: "Равным образом постоянный количественный рост и сфера нашей активности обеспечивает актуальность соответствующих условий активизации."
+image      : "путь/до/изображения.jpg"
+image_alt  : "Описание изображения"
+dnt        : false

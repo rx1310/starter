@@ -1,0 +1,7 @@
+# ? браузер QQ
+# * {string}  orientation: фиксирует экран в заданной ориентации [landscape,portrait]
+# * {boolean} fullscreen : отображение этого документа в полноэкранном режиме
+# * {string}  page_mode  : документ будет отображаться в "режиме приложения" (полноэкранный режим и т.д.)
+orientation: "portrait"
+fullscreen : false
+page_mode  : "app"

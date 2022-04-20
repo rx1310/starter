@@ -1,0 +1,36 @@
+body {
+
+	background-color: k19.map-deep-get($base, background-color);
+	color           : k19.map-deep-get($base, color);
+	font-family     : k19.map-deep-get($base, font-family-sans);
+	margin          : 0;
+
+	@if k19.map-deep-get($base, scroll-behavior) != null {
+		@media (prefers-reduced-motion: no-preference) {
+			scroll-behavior : k19.map-deep-get($base, scroll-behavior);
+		}
+	}
+
+	// ? https://developer.mozilla.org/en-US/docs/Web/CSS/font-smooth
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+
+	// ? https://developer.mozilla.org/ru/docs/Web/CSS/user-select
+	@if k19.map-deep-get($base, user-select) != null {
+		@include k19.prefixer(
+			user-select,
+			k19.map-deep-get($base, user-select),
+			webkit moz ms
+		);
+	}
+
+	// ? https://clck.ru/NNamf
+	@if k19.map-deep-get($base, text-size-adjust) != null {
+		@include k19.prefixer(
+			text-size-adjust,
+			k19.map-deep-get($base, text-size-adjust),
+			webkit moz ms
+		);
+	}
+
+}

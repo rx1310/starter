@@ -1,4 +1,5 @@
-app/styles/**/*.md
-app/includes/**/*.md
-app/layouts/**/*.md
-app/scripts/**/*.md
+_styles/**/*.md
+_scripts/**/*.md
+_incudes/**/*.md
+README.md
+CHANGELOG.md
