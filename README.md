@@ -1,4 +1,4 @@
-# starter [![Список изменений](https://img.shields.io/github/package-json/version/rx1310/starter/develop?label=%20)](CHANGELOG.md)
+# starter [![Список изменений](https://img.shields.io/github/package-json/version/rx1310/main?label=%20)](CHANGELOG.md)
 
 Стартовый шаблон для статичного сайта, написанный на [@11ty][gh_11ty], [@sass][gh_sass] (+ [@91muilak][gh_k19]) и [Nunjucks][gh_njk].
 
