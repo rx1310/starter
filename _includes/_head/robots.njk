@@ -1,0 +1,5 @@
+{% if data.robots != null %}
+	<meta name="robots" content="{{ data.robots }}">    {# * все поисковые системы #}
+	<meta name="googlebot" content="{{ data.robots }}"> {# * указание отдельно для Google #}
+	<meta name="bingbot" content="{{ data.robots }}">   {# * указание отдельно для Bing #}
+{% endif %}

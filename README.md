@@ -17,7 +17,6 @@
 ![Кол-во посетителей](https://visitor-badge.laobi.icu/badge?page_id=rx1310.starter)
 ![Лицензия](https://img.shields.io/github/license/rx1310/starter)
 
-Актуальные версии зависимостей (main):
 
 ![Версия 11ty](https://img.shields.io/github/package-json/dependency-version/rx1310/starter/dev/@11ty/eleventy/main?color=fff)
 ![Версия SASS](https://img.shields.io/github/package-json/dependency-version/rx1310/starter/dev/sass/main?color=CC6699)
@@ -33,7 +32,7 @@
 
 Проект был создан для упрощения создания сайта на базе генератора статики **11ty**. Шаблон **starter** может быть интересен тем, что:
 - не нужно с нуля создавать проект и его структуру,
-- не нужно проектировать интерфейс и писать стили,
+- есть уже готовый конфиг для 11ty,
 - можно легко сконфигурировать проект под свои нужды,
 - ...
 
@@ -86,11 +85,11 @@
 ```js
 // .11ty.js
 dir: {
-  input   : 'app',       // входная точка
-  output  : 'dist',      // папка, в которую будет собран сайт
-  includes: 'includes/', // шаблоны njk
-  layouts : 'layouts/',  // шаблоны разметок njk
-  data    : "data"       // папка, в которой хранятся JSON / YAMl второстепенные файлы с конфигурацией
+  input   : '.',          // входная точка
+  output  : 'dist',       // папка, в которую будет собран сайт
+  includes: '_includes/', // шаблоны njk
+  layouts : '_layouts/',  // шаблоны разметок njk
+  data    : "_data"       // папка, в которой хранятся JSON / YAMl второстепенные файлы с конфигурацией
 }
 ```
 

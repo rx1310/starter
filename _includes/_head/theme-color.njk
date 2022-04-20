@@ -1,0 +1,9 @@
+{% if data.theme_color != null %}
+	<meta name="theme-color" content="{{ data.theme_color }}">
+	<meta name="msapplication-TileColor" content="{{ data.theme_color }}">
+	<meta name="apple-mobile-web-app-status-bar-style" content="{{ data.theme_color }}">
+{% endif %}
+
+{% if data.color_scheme != null %}
+	<meta name="color-scheme" content="{{ data.color_scheme }}">
+{% endif %}

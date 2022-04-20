@@ -7,8 +7,8 @@ module.exports = function(cnf) {
 
 	cnf.addDataExtension("yaml", contents => yaml.load(contents));
 	cnf.addDataExtension('yml', contents => yaml.load(contents));
-	cnf.addPassthroughCopy('app/assets');
-	cnf.addPassthroughCopy('app/scripts');
+	cnf.addPassthroughCopy({'_assets': 'assets'});
+	cnf.addPassthroughCopy({'_scripts': 'scripts'});
 
 	cnf.setUseGitIgnore(true);
 
@@ -20,8 +20,8 @@ module.exports = function(cnf) {
 		},
 
 		files: [
-			'app/styles/**/*.*',
-			'app/scripts/**/*.*'
+			'_styles/**/*.*',
+			'_scripts/**/*.*'
 		],
 
 		ghostMode: false,
@@ -68,11 +68,11 @@ module.exports = function(cnf) {
 	return {
 
 		dir: {
-			input   : 'app',
+			input   : '.',
 			output  : 'dist',
-			includes: 'includes/',
-			layouts : 'layouts/',
-			data    : "data"
+			includes: '_includes/',
+			layouts : '_layouts/',
+			data    : "_data"
 		},
 
 		templateFormats    : ['md', 'njk'],

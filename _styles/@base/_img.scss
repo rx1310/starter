@@ -1,0 +1,14 @@
+/// @name Image
+/// @group Base
+/// @param $max-size - максимальный размер изображения
+img {
+
+	$max-size: 100%;
+
+	border-style: none;
+	overflow: none;
+	max-width: $max-size;
+	max-height: $max-size;
+	vertical-align: middle;
+
+}
