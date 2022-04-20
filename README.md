@@ -77,7 +77,7 @@
 | `sass:watch`   | запуск вотчера SCSS-файлов                      |
 
 ## Конфигурация
-Для начала уточню структуру проекта. Весь основной код находится в папке [app/](app/), структуру которой можно посмотреть при помощи команды [`tree app`](https://losst.ru/komanda-tree-linux).
+Для начала уточню структуру проекта. Весь основной код находится в корневой папке, структуру которой можно посмотреть при помощи команды [`tree .`](https://losst.ru/komanda-tree-linux).
 
 ### 11ty
 Итоговый (output) сайт будет находиться в папке dist/. За это отвечает файл конфигурации 11ty [.11ty.js](.11ty.js).
@@ -111,11 +111,11 @@ cnf.setBrowserSyncConfig({
 > Если вам нужен, например, браузер Google Chrome, то пропишите `["google chrome"]`, а если нужен Google Chrome и Mozilla Firefox - `["google chrome", "firefox"]` в параметр `browser`.
 
 ### SASS
-Основной файл стилей - это [main.scss](app/styles/main.scss), к которому подключаются модули и прочее.
+Основной файл стилей - это [main.scss](_styles/main.scss), к которому подключаются модули и прочее.
 
-Есть отдельная папка [styles/vendor/](app/styles/vendor/), в которой содержатся сторонние библиотеки, которые в основном в [main.scss](app/styles/main.scss) не добавляются. Собираются они также в папку *dist/styles/vendor/*.
+Есть отдельная папка [_styles/vendor/](_styles/vendor/), в которой содержатся сторонние библиотеки, которые в основном в [main.scss](_styles/main.scss) не добавляются. Собираются они также в папку *dist/styles/vendor/*.
 
-[Подробнее →](app/styles/README.md)
+[Подробнее →](_styles/README.md)
 
 ## Лицензия
 Проект [starter](https://github.com/rx1310/starter) распространяется совершенно бесплатно и находится под защитой лицензии [MIT](LICENSE).

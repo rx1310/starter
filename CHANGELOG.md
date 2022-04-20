@@ -1,3 +1,23 @@
+## 0.0.2
+- небольшие правки
+- небольшие правки в шаблоне Yandex.Metrika
+- добавляет базовые стили
+- дорабатывает доку [_config.scss](_styles/_config.scss)
+- добавляет конфиги для GitHub
+- дополняет комментарии в файле [_config.scss](_styles/_config.scss)
+- добавляет медиа для свойства scroll-behavior
+- добавляет переменную для семейства шрифтов
+- добавляет переменную enable для отключения генерации OpenGraph и Twitter Card
+- добавляет основной CSS-файл со стилями
+- добавляет Sanitize.css и Bootstrap Grid в head
+- test: добавляет скрипт [themer.js](_scripts/themer.js)
+- добавляет файл README.md в папку стилей themer
+- обновляет README.md
+- меняет цвета для `theme-color` в скрипте Themer
+- дорабатывает доку для Themer
+- добавляет скрипт [scrollup.js](_scripts/scrollup.js)
+- реорганизация структуры проекта
+
 ## 0.0.1
 - добавляет файл GITIGNORE
 - добавляет файл @editorconfig
